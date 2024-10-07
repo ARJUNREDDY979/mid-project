@@ -1,0 +1,211 @@
+body{
+    background-color: whitesmoke;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav{
+    height: 20px;
+    background-color:black;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+nav a{
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+nav a:hover{
+    background-color: none;
+}
+h1,h2{
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+}
+p{
+    text-decoration: none;
+    font-family:'Times New Roman';
+    font-size: large;
+}
+paper p{
+    font-size: medium;
+}
+paper a:hover{
+    color:black;
+}
+.outlayer{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "aboutme Published_papers Published_papers"
+                         "aboutme Gallery Achievements"
+                         "Blogs Blogs Hobbies";                    
+    grid-gap: 5px;
+    box-sizing: border-box;
+    margin: 10px;
+    max-width: 1465px;
+}
+.aboutme{
+    border: 2px solid black;
+    height:605px ;
+    width: 525px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.Published_papers{
+    border: 2px solid black;
+    height:300px ;
+    width: 940px;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+.Gallery{
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 300px;
+    width:470px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.Hobbies{
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 390px;
+    width:470px;
+    box-sizing: border-box;
+}
+.Blogs{
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 390px;
+    width:1000px;
+    box-sizing: border-box;
+}
+.Achievements{
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 300px;
+    width: 470px;
+    box-sizing: border-box;
+}
+.aboutmeimg{
+    display: inline;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-right: 50%;
+}
+.section-image {
+    display: inline;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-left: 50%;
+    margin-right: 50%;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+.gallery-images{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+.aboutme{
+    grid-area: aboutme;
+}
+.Published_papers{
+    grid-area: Published_papers;
+}
+.Gallery{
+    grid-area:Gallery;
+}
+.Hobbies{
+    grid-area: Hobbies;
+}
+.Blogs{
+    grid-area: Blogs;
+}
+.Achievements{
+    grid-area: Achievements;
+}
+.papers{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+}
+.blogg{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+}
+.paper {
+    border: 2px solid black; 
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 200px;
+    width: 280px;
+}
+.blog {
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 240px;
+    width: 310px;
+}
+@media only screen and (max-width: 500px) {
+    .outlayer {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+            "aboutme"
+            "Published_papers"
+            "Gallery"
+            "Blogs"
+            "Hobbies"
+            "Achievements";
+        grid-gap: 10px; 
+        margin: 10px;
+    }
+    nav {
+        padding: 10px;
+        height: auto;
+        width: 100%;
+    }
+    nav a {
+        margin: 5px;
+        padding: 5px;
+        text-align: center; 
+        display: block;
+    }
+    .aboutme,.Published_papers,.Gallery,.Blogs,.Hobbies,.Achievements {
+        width: 100%; 
+        height: auto; 
+        padding: 10px;
+        box-sizing: border-box; 
+    }
+    .papers{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px; 
+    }
+    .blogg{
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-gap: 10px; 
+    }
+    .paper,.blog {
+        width: 90%; 
+        height: auto;
+        margin-bottom: 8px;
+    }
+}
